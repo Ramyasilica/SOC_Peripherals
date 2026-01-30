@@ -113,6 +113,9 @@ From the simulation waveform:
 * Fully verified using behavioral simulation
 * Beginner-friendly RTL design
 
+# Output waveform
+![image alt](https://github.com/Ramyasilica/SOC_Peripherals/blob/db1cd25f145ff68c8801e5f67631ab84c941f32e/Minisoc.jpg)
+
 
  🧾 Conclusion
 
