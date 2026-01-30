@@ -45,11 +45,8 @@ soc uut (
     .debug_pc(debug_pc)
 );
 
-// Clock generation
 initial clk = 0;
 always #5 clk = ~clk; // 100 MHz clock
-
-// Reset
 initial begin
     rst_n = 0;
     uart_rx = 1;
@@ -64,7 +61,6 @@ initial begin
               $time, debug_pc, debug_acc, led, uart_tx);
 end
 
-// Simulation runtime
 initial begin
     #200 $finish;
 end
