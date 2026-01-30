@@ -31,9 +31,7 @@ module soc (
     output reg [7:0] debug_pc
 );
 
-//-------------------------------------------------
 // Simple CPU (4-bit accumulator-based CPU)
-//-------------------------------------------------
 reg [3:0] acc;           // accumulator
 reg [7:0] pc;            // program counter
 reg [7:0] instruction;
@@ -43,20 +41,12 @@ reg [7:0] program [0:15]; // small program memory
 wire [3:0] alu_out;
 reg [3:0] gpio_out;
 
-// CPU: simple instruction set
-// Opcodes (4 bits): 
-// 0000: NOP
-// 0001: LDA addr -> load acc from RAM
-// 0010: ADD addr -> acc = acc + RAM[addr]
-// 0011: OUT GPIO -> acc -> GPIO
-// 1111: HLT
-
 assign led = gpio_out;
 
-//-----------------ALU-----------------
+//ALU
 assign alu_out = acc + ram[instruction[3:0]];
 
-//----------------Program Memory Init-----------------
+//Program Memory Unit
 integer i;
 initial begin
     // Simple test program
@@ -72,7 +62,7 @@ initial begin
     ram[3] = 4'd0;
 end
 
-//----------------CPU Execution-----------------
+//CPU Execution
 always @(posedge clk or negedge rst_n) begin
     if(!rst_n) begin
         pc <= 0;
@@ -104,9 +94,7 @@ always @(posedge clk or negedge rst_n) begin
     debug_pc  <= pc;
 end
 
-//-------------------------------------------------
-// UART (Simple Transmit Only for Test)
-//-------------------------------------------------
+// UART Transmit
 reg [7:0] uart_data;
 reg [3:0] uart_cnt;
 reg uart_busy_reg;
