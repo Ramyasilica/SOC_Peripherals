@@ -34,7 +34,7 @@ The SoC executes instructions sequentially, processes data internally, and commu
 
 ## Processor Core
 
-# Processor Signals
+## Processor Signals
 
 * `debug_pc[7:0]` – Program Counter (instruction address)
 * `debug_acc[3:0]` – Accumulator (data register)
@@ -52,7 +52,7 @@ The SoC executes instructions sequentially, processes data internally, and commu
 
 ## GPIO Interface (LEDs & Switches)
 
-# GPIO Signals
+## GPIO Signals
 
 * `led[3:0]` – Output LEDs
 * `sw[3:0]` – Input switches
@@ -67,7 +67,7 @@ The SoC executes instructions sequentially, processes data internally, and commu
 
 ## UART Interface
 
-# UART Signals
+## UART Signals
 
 * `uart_tx` – Serial transmit line
 * `uart_rx` – Serial receive line
