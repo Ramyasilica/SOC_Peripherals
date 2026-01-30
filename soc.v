@@ -26,12 +26,12 @@ module soc (
     output wire uart_tx,
     output wire [3:0] led,     // GPIO output
 
-    // Debug outputs for waveform/monitor
+    // Debug outputs for waveform
     output reg [3:0] debug_acc,
     output reg [7:0] debug_pc
 );
 
-// Simple CPU (4-bit accumulator-based CPU)
+// Simple CPU (4-bit)
 reg [3:0] acc;           // accumulator
 reg [7:0] pc;            // program counter
 reg [7:0] instruction;
