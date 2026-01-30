@@ -114,7 +114,7 @@ From the simulation waveform:
 * Beginner-friendly RTL design
 
 # Output waveform
-![image alt](https://github.com/Ramyasilica/SOC_Peripherals/blob/db1cd25f145ff68c8801e5f67631ab84c941f32e/Minisoc.jpg)
+![image alt](https://github.com/Ramyasilica/SOC_Peripherals/blob/78c3fe2031417f4f0fca3f0d685b9aec3f79b489/Minisoc.jpg)
 
 
  🧾 Conclusion
